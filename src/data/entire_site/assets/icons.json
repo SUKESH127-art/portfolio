@@ -1,0 +1,31 @@
+{
+  "favicon": {
+    "path": "/assets/moon_icon Background Removed.png",
+    "description": "Site favicon - moon icon"
+  },
+  "social": {
+    "whatsapp": {
+      "path": "/assets/socials/whatsApp.svg",
+      "description": "WhatsApp social icon"
+    },
+    "linkedin": {
+      "path": "/assets/socials/linkedIn.svg",
+      "description": "LinkedIn social icon"
+    },
+    "instagram": {
+      "path": "/assets/socials/instagram.svg",
+      "description": "Instagram social icon"
+    },
+    "github": {
+      "path": "/assets/logos/github.svg",
+      "description": "GitHub icon (replaces WhatsApp in footer)"
+    }
+  },
+  "experience": {
+    "moon": {
+      "path": "/assets/moon_icon Background Removed.png",
+      "description": "Moon icon for timeline animation"
+    }
+  }
+}
+

@@ -1,0 +1,242 @@
+{
+  "brand": {
+    "primary": {
+      "base": "#0e7490",
+      "name": "Aqua",
+      "description": "Primary brand color - used for navigation links, active states, and primary actions",
+      "hover": "#155e75",
+      "hoverName": "Aqua Dark",
+      "hoverDescription": "Darker shade for hover states on primary elements"
+    },
+    "secondary": {
+      "base": "#5c33cc",
+      "name": "Royal",
+      "description": "Secondary brand color - used for accents and special elements"
+    },
+    "accent": {
+      "base": "#7a57db",
+      "name": "Lavender",
+      "description": "Accent color - used in gradients and special highlights"
+    }
+  },
+  "background": {
+    "page": {
+      "base": "#e0f2fe",
+      "name": "Sky Light",
+      "description": "Main page background color"
+    },
+    "white": {
+      "base": "#ffffff",
+      "name": "White",
+      "description": "Pure white for cards and containers"
+    },
+    "dark": {
+      "base": "#000000",
+      "name": "Black",
+      "description": "Pure black for overlays and dark elements"
+    },
+    "gradient": {
+      "overlay": {
+        "base": "rgba(224, 242, 254, 0.3)",
+        "name": "Sky Light Overlay",
+        "description": "Semi-transparent overlay for section transitions"
+      }
+    }
+  },
+  "text": {
+    "primary": {
+      "base": "#0f172a",
+      "name": "Slate Dark",
+      "description": "Primary text color - main content text"
+    },
+    "secondary": {
+      "base": "#475569",
+      "name": "Slate Medium",
+      "description": "Secondary text color - less prominent text"
+    },
+    "muted": {
+      "base": "#64748b",
+      "name": "Slate Muted",
+      "description": "Muted text color - placeholders and helper text"
+    },
+    "light": {
+      "base": "#ffffff",
+      "name": "White",
+      "description": "Light text on dark backgrounds"
+    },
+    "home": {
+      "primary": {
+        "base": "#0c4a6e",
+        "name": "Sky 700",
+        "description": "Home section primary text color"
+      },
+      "accent": {
+        "base": "#0c4a6e",
+        "name": "Sky 900",
+        "description": "Home section accent text color - bold headings"
+      }
+    },
+    "experiences": {
+      "job": {
+        "base": "#0c4a6e",
+        "name": "Sky 900",
+        "description": "Job title color in experience cards"
+      },
+      "title": {
+        "base": "#0369a1",
+        "name": "Sky 700",
+        "description": "Position title color in experience cards"
+      },
+      "date": {
+        "base": "#475569",
+        "name": "Slate 600",
+        "description": "Date text color in experience cards"
+      }
+    },
+    "projects": {
+      "title": {
+        "base": "#ffffff",
+        "name": "White",
+        "description": "Project title text color"
+      },
+      "description": {
+        "base": "#d1d5db",
+        "name": "Gray 300",
+        "description": "Project description text color"
+      },
+      "hover": {
+        "base": "#e9d5ff",
+        "name": "Purple 200",
+        "description": "Hover state text color for project cards"
+      }
+    },
+    "navigation": {
+      "mobile": {
+        "base": "#374151",
+        "name": "Neutral 700",
+        "description": "Mobile navigation title text color"
+      }
+    }
+  },
+  "borders": {
+    "default": {
+      "base": "#e2e8f0",
+      "name": "Slate 200",
+      "description": "Default border color for cards and containers"
+    },
+    "input": {
+      "base": "#cbd5e1",
+      "name": "Slate 300",
+      "description": "Input field border color"
+    },
+    "glass": {
+      "light": {
+        "base": "rgba(255, 255, 255, 0.2)",
+        "name": "White 20%",
+        "description": "Light glass border - subtle transparency"
+      },
+      "medium": {
+        "base": "rgba(255, 255, 255, 0.3)",
+        "name": "White 30%",
+        "description": "Medium glass border - more visible"
+      }
+    }
+  },
+  "glass": {
+    "background": {
+      "light": {
+        "base": "rgba(255, 255, 255, 0.1)",
+        "name": "White 10%",
+        "description": "Light glass background - subtle transparency"
+      },
+      "medium": {
+        "base": "rgba(255, 255, 255, 0.15)",
+        "name": "White 15%",
+        "description": "Medium glass background - more visible"
+      },
+      "veryLight": {
+        "base": "rgba(255, 255, 255, 0.05)",
+        "name": "White 5%",
+        "description": "Very light glass background - minimal transparency"
+      },
+      "dark": {
+        "base": "rgba(255, 255, 255, 0.2)",
+        "name": "White 20%",
+        "description": "Dark glass background - more opaque"
+      },
+      "mobile": {
+        "base": "rgba(255, 255, 255, 0.95)",
+        "name": "White 95%",
+        "description": "Mobile menu glass background - nearly opaque"
+      }
+    },
+    "border": {
+      "light": "rgba(255, 255, 255, 0.2)",
+      "medium": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  "overlays": {
+    "dark": {
+      "base": "rgba(0, 0, 0, 0.3)",
+      "name": "Black 30%",
+      "description": "Dark overlay for modals and overlays"
+    },
+    "gradient": {
+      "black": {
+        "base": "rgba(0, 0, 0, 0.5)",
+        "name": "Black 50%",
+        "description": "Gradient overlay for project cards"
+      },
+      "purple": {
+        "base": "rgba(147, 51, 234, 0.2)",
+        "name": "Purple 500 20%",
+        "description": "Purple gradient overlay for hover effects"
+      }
+    }
+  },
+  "theme": {
+    "primary": "#f8fafc",
+    "midnight": "#f1f5f9",
+    "navy": "#e2e8f0",
+    "indigo": "#cbd5e1",
+    "storm": "#94a3b8",
+    "aqua": "#0e7490",
+    "mint": "#059669",
+    "royal": "#5c33cc",
+    "lavender": "#7a57db",
+    "fuchsia": "#be185d",
+    "orange": "#ea580c",
+    "sand": "#d97706",
+    "coral": "#e11d48"
+  },
+  "shadows": {
+    "glass": {
+      "base": "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+      "name": "Glass Shadow",
+      "description": "Shadow for glass morphism effects"
+    },
+    "glassHover": {
+      "base": "0 12px 40px 0 rgba(31, 38, 135, 0.5)",
+      "name": "Glass Shadow Hover",
+      "description": "Enhanced shadow on glass hover"
+    },
+    "card": {
+      "base": "0 8px 40px -12px rgba(0, 0, 0, 0.3)",
+      "name": "Card Shadow",
+      "description": "Shadow for experience cards"
+    },
+    "default": {
+      "base": "0 8px 32px rgba(0, 0, 0, 0.1)",
+      "name": "Default Shadow",
+      "description": "Default shadow for containers"
+    }
+  },
+  "particles": {
+    "color": {
+      "base": "#cbd5e1",
+      "name": "Indigo",
+      "description": "Particle effect color"
+    }
+  }
+}
+

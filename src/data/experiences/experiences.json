@@ -1,0 +1,89 @@
+[
+  {
+    "title": "Software Engineer",
+    "job": "Google",
+    "date": "May '22 - Present",
+    "logo": "/assets/work_experiences/google-logo Background Removed.png",
+    "contents": [
+      "Android SysUI (Navigation) + YouTube XR (Playables) - Full-time since Aug 2023",
+      "Built proof-of-concepts and prototypes, presenting to Directors and VP-level leadership",
+      "Drove Taskbar for Connected Displays from concept to launch, featured at Google I/O 2025",
+      "Led YouTube Playables x Immersive Live integration, enabling 66+ million creators to launch games during streams",
+      "Deployed critical navigation features reaching 3.9+ billion Android devices worldwide",
+      "Improved Playables mobile UI achieving 16% increase in user playtime through iterative design",
+      "Developed Launcher Secondary Display support for Android Pixel devices (Internship: May 2022 - Aug 2022)",
+      "Contributed to Android Open Source Project (AOSP) and created automated CI/CD test infrastructure",
+      "Contributed 40,000+ lines of production code with comprehensive test coverage"
+    ]
+  },
+  {
+    "title": "Backend Engineer",
+    "job": "PetSmart",
+    "date": "Jun '21 - Aug '21",
+    "logo": "/assets/work_experiences/PetSmart Background Removed.png",
+    "contents": [
+      "Automated backend data workflows & built Alexa Voice AI booking agent",
+      "Pitched minority-owned pet product line directly to CEO, CFO, CTO, and VPs",
+      "Wireframed, designed (Figma), and built apps from scratch to automate time-intensive tasks",
+      "Developed app to automate manual pet service requests with Alexa voice-controlled inquiries",
+      "Wrote Java backend API to automate customer data deletion, saving employees 4 hours per deletion",
+      "Built backend Salesforce applications using Visualforce and Apex",
+      "Skills: Salesforce, Apex Programming, SQL"
+    ]
+  },
+  {
+    "title": "Product Engineer",
+    "job": "Havenly Treats",
+    "date": "Dec '19 - May '20",
+    "logo": "/assets/work_experiences/havenly Background Removed.png",
+    "contents": [
+      "Led 0→1 projects at startup to improve revenue/retention, generated $100K+ for local refugees",
+      "Completely revamped entire website and backend infrastructure independently",
+      "Converted UI from HTML/CSS to React framework and migrated backend from Google Sheets to Firebase",
+      "Led A/B testing initiatives and conducted UX interviews directly with customers",
+      "Implemented Google Analytics and Google Tag Manager for data-driven insights",
+      "Skills: React.js, Firebase, Go-to-Market Strategy, Search Engine Optimization (SEO)"
+    ]
+  },
+  {
+    "title": "Frontend Engineer",
+    "job": "Veras Retail",
+    "date": "Jun '20 - Aug '20",
+    "logo": "/assets/work_experiences/veras.png",
+    "contents": [
+      "Designed & built user experience for all-in-one retail customer checkout app (Veras Extend 1.0)",
+      "Developed cross-platform mobile application using Ionic Framework and Angular",
+      "Created iOS, Android, and Windows-compatible ERP, CRM and payment integrations",
+      "Built comprehensive retail checkout solution with seamless user experience",
+      "Skills: Ionic Framework, Angular"
+    ]
+  },
+  {
+    "title": "Researcher",
+    "job": "ASU",
+    "date": "Oct '17 - Sep '19",
+    "logo": "/assets/work_experiences/asu_reserarch.jpg",
+    "contents": [
+      "Optimized Si+GaAs bonding (authored 5 peer-reviewed articles & gave conf. talks (AVS, MRS, CAARI)",
+      "Conducted research optimizing Silicon/Gallium Arsenide (Si/GaAs) wafer bonding",
+      "Authored 5 peer-reviewed publications in materials science journals",
+      "Presented research at 3 major conferences: AVS, MRS, and CAARI",
+      "AVS 65th International Symposium & Exhibition: GaAs and Si Surface Energies derived from Three Liquid Contact Angle Analysis",
+      "Demonstrated strong written and verbal communication skills in academic setting"
+    ]
+  },
+  {
+    "title": "Co-Founder",
+    "job": "MicroDrop",
+    "date": "Jul '18 - Aug '19",
+    "logo": "/assets/work_experiences/microdrop Background Removed.png",
+    "contents": [
+      "Researched, developed & patented HemaDrop™ for microliter blood analysis",
+      "State Analysis of Blood Electrolytes and Metals in Films Solidified from µL-sized Blood Drops",
+      "Developed new Microfluidic Collection Device, InnovaStrip™",
+      "Led research and development of innovative medical diagnostic technology",
+      "Managed startup operations and intellectual property development"
+    ]
+  }
+]
+

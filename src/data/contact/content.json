@@ -1,0 +1,29 @@
+{
+  "heading": "Let's Talk",
+  "description": "Whether you're loking to build a new website, improve your existing platform, or bring a unique project to life, I'm here to help",
+  "form": {
+    "labels": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "JohnDoe@email.com",
+      "message": "Share your thoughts..."
+    },
+    "button": {
+      "send": "Send",
+      "sending": "Sending..."
+    }
+  },
+  "alerts": {
+    "success": "You message has been sent!",
+    "error": "Somthing went wrong!"
+  },
+  "emailjs": {
+    "toName": "Sukesh",
+    "toEmail": "sukeshram7245@gmail.com"
+  }
+}
+

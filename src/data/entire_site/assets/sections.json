@@ -1,0 +1,27 @@
+{
+  "about": {
+    "background": {
+      "path": "/assets/watercolor-painting-seascape-beach-Itogahama-Oita-Japan.jpg",
+      "description": "Watercolor seascape painting background for About section",
+      "position": "center",
+      "size": "cover"
+    }
+  },
+  "experiences": {
+    "background": {
+      "path": "/assets/work_experiences/monet1.jpg",
+      "description": "Monet painting background for Experiences section",
+      "position": "center",
+      "size": "cover"
+    }
+  },
+  "projects": {
+    "background": {
+      "path": "/assets/impression-sunrise.jpg",
+      "description": "Impressionist sunrise painting background for Projects section",
+      "position": "center",
+      "size": "cover"
+    }
+  }
+}
+

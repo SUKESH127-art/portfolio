@@ -1,0 +1,62 @@
+{
+  "background": {
+    "sky": {
+      "path": "/assets/sky.jpg",
+      "description": "Sky background layer for parallax effect",
+      "position": "bottom",
+      "size": "cover"
+    },
+    "clouds": {
+      "path": "/assets/cloud.png",
+      "description": "Cloud layer used for parallax effect (used 3 times with different opacities)",
+      "layers": [
+        {
+          "id": "layer3",
+          "opacity": 0.6,
+          "zIndex": -40,
+          "description": "Furthest back cloud layer, moves 70% on scroll"
+        },
+        {
+          "id": "layer2",
+          "opacity": 0.5,
+          "zIndex": -20,
+          "description": "Middle cloud layer, moves 30% on scroll"
+        },
+        {
+          "id": "layer1",
+          "opacity": 0.4,
+          "zIndex": -10,
+          "description": "Closest cloud layer, static position"
+        }
+      ]
+    }
+  },
+  "decorative": {
+    "seagulls": {
+      "path": "/assets/seagulls.png",
+      "description": "Animated seagulls image in bottom-right of home section",
+      "animation": {
+        "name": "float",
+        "duration": "6s",
+        "type": "ease-in-out",
+        "iteration": "infinite",
+        "movement": "30px vertical"
+      },
+      "position": {
+        "desktop": {
+          "bottom": "128px",
+          "right": "160px"
+        },
+        "mobile": {
+          "bottom": "80px",
+          "right": "128px"
+        }
+      },
+      "size": {
+        "desktop": "40vh",
+        "mobile": "30vh"
+      }
+    }
+  }
+}
+

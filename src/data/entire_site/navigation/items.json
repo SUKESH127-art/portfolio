@@ -1,0 +1,16 @@
+{
+  "navItems": [
+    { "label": "Home", "href": "#home", "id": "home" },
+    { "label": "About Me", "href": "#about", "id": "about" },
+    { "label": "Experience", "href": "#experience", "id": "experience" },
+    { "label": "Projects", "href": "#projects", "id": "projects" }
+  ],
+  "mobileTitles": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Work",
+    "projects": "Projects"
+  },
+  "sections": ["home", "about", "experience", "projects"]
+}
+

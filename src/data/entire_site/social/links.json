@@ -1,0 +1,18 @@
+[
+  {
+    "name": "WhatsApp",
+    "href": "",
+    "icon": "/assets/socials/whatsApp.svg"
+  },
+  {
+    "name": "Linkedin",
+    "href": "https://www.linkedin.com/in/sukeshram/",
+    "icon": "/assets/socials/linkedIn.svg"
+  },
+  {
+    "name": "Instagram",
+    "href": "https://www.instagram.com/sukesh_ram_/",
+    "icon": "/assets/socials/instagram.svg"
+  }
+]
+

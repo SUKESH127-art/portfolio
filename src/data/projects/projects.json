@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "title": "DBAgent",
+    "description": "AI-powered Claude Agent that converts natural language to SQL queries using Model Context Protocol (MCP) technology.",
+    "subDescription": [
+      "Building AI-powered Claude Agent that converts natural language to SQL queries",
+      "Executes SQL queries in SQLite databases using Model Context Protocol",
+      "Exploring cutting-edge MCP technology and LLM-database integration",
+      "Open-source project demonstrating initiative and technical curiosity"
+    ],
+    "href": "https://github.com/SUKESH127-art/mcp-sql-agent",
+    "logo": "",
+    "image": "/assets/logos/mcp_sql.webp",
+    "tags": [
+      {
+        "id": 1,
+        "name": "Claude AI",
+        "path": "/assets/logos/csharp.svg"
+      },
+      {
+        "id": 2,
+        "name": "MCP",
+        "path": "/assets/logos/dotnet.svg"
+      },
+      {
+        "id": 3,
+        "name": "SQLite",
+        "path": "/assets/logos/sqlite.svg"
+      },
+      {
+        "id": 4,
+        "name": "Python",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "LLM-Scribe",
+    "description": "Next.js application that generates and stores LLMs.txt files with automated updates using CRON jobs and Google OAuth integration.",
+    "subDescription": [
+      "Built Next.js application that generates and stores LLMs.txt files",
+      "Implemented automated updates using CRON jobs",
+      "Integrated Google authentication and deployed to production (Vercel)",
+      "Full-stack ownership from concept to deployment"
+    ],
+    "href": "https://github.com/SUKESH127-art/llm_scribe",
+    "logo": "",
+    "image": "/assets/logos/llm_scribe.png",
+    "tags": [
+      {
+        "id": 1,
+        "name": "Next.js",
+        "path": "/assets/logos/react.svg"
+      },
+      {
+        "id": 2,
+        "name": "Supabase",
+        "path": "/assets/logos/sqlite.svg"
+      },
+      {
+        "id": 3,
+        "name": "Vercel",
+        "path": "/assets/logos/tailwindcss.svg"
+      },
+      {
+        "id": 4,
+        "name": "CRON",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "InsightGPT",
+    "description": "Application for brand LLM visibility analysis that simulates user searches on Google and ChatGPT to provide brand presence insights.",
+    "subDescription": [
+      "Developed application for brand LLM visibility analysis",
+      "Simulates user searches on Google and ChatGPT",
+      "Provides visualization of brand presence in AI-generated responses",
+      "Demonstrates understanding of modern AI landscape and SEO"
+    ],
+    "href": "https://github.com/SUKESH127-art/LLM-Search-Insights-Web-UI",
+    "logo": "",
+    "image": "/assets/logos/llm_search_insight.png",
+    "tags": [
+      {
+        "id": 1,
+        "name": "Next.js",
+        "path": "/assets/logos/react.svg"
+      },
+      {
+        "id": 2,
+        "name": "AI/LLM",
+        "path": "/assets/logos/dotnetcore.svg"
+      },
+      {
+        "id": 3,
+        "name": "SEO",
+        "path": "/assets/logos/sqlite.svg"
+      },
+      {
+        "id": 4,
+        "name": "Analytics",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "PyCrawl",
+    "description": "Public API that crawls URLs and generates LLMs.txt files with full Docker containerization and CI/CD pipeline deployment.",
+    "subDescription": [
+      "Built public API that crawls URLs and generates LLMs.txt files",
+      "Containerized application using Docker with full CI/CD pipeline (CircleCI)",
+      "Deployed production service on Render platform",
+      "End-to-end ownership of infrastructure and deployment"
+    ],
+    "href": "https://github.com/SUKESH127-art/python_web_crawler",
+    "logo": "",
+    "image": "/assets/pycrawl.png",
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python",
+        "path": "/assets/logos/cplusplus.svg"
+      },
+      {
+        "id": 2,
+        "name": "Docker",
+        "path": "/assets/logos/csharp.svg"
+      },
+      {
+        "id": 3,
+        "name": "CircleCI",
+        "path": "/assets/logos/git.svg"
+      },
+      {
+        "id": 4,
+        "name": "Render",
+        "path": "/assets/logos/microsoft.svg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "TellusDoc",
+    "description": "Telehealth platform with AI-powered diagnosis built at Microsoft AfriHacks, featuring video calling and medical transcription services.",
+    "subDescription": [
+      "Created telehealth platform with AI-powered diagnosis at Microsoft AfriHacks",
+      "Integrated video calling and medical transcription services",
+      "Demonstrated ability to build customer-facing products under time pressure",
+      "Full-stack development with Azure AI and Microsoft Azure services"
+    ],
+    "href": "https://devpost.com/software/tellusdoc-fyz0ge?ref_content=user-portfolio&ref_feature=in_progress",
+    "logo": "",
+    "image": "/assets/logos/tellusdoc.png",
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python",
+        "path": "/assets/logos/wordpress.svg"
+      },
+      {
+        "id": 2,
+        "name": "Flask",
+        "path": "/assets/logos/html5.svg"
+      },
+      {
+        "id": 3,
+        "name": "Azure AI",
+        "path": "/assets/logos/azure.svg"
+      },
+      {
+        "id": 4,
+        "name": "Azure",
+        "path": "/assets/logos/vitejs.svg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Havenly",
+    "description": "Full-stack platform that generated $100K+ wealth for refugee community through complete website and backend infrastructure modernization.",
+    "subDescription": [
+      "Led 0-to-1 technology projects that generated $100,000+ wealth for local refugee community",
+      "Completely revamped entire website and backend infrastructure independently",
+      "Converted UI from HTML/CSS to React framework and migrated backend from Google Sheets to Firebase",
+      "Led A/B testing initiatives and conducted UX interviews directly with customers"
+    ],
+    "href": "https://havenly-treats.com",
+    "logo": "",
+    "image": "/assets/logos/havenly.png",
+    "tags": [
+      {
+        "id": 1,
+        "name": "React",
+        "path": "/assets/logos/react.svg"
+      },
+      {
+        "id": 2,
+        "name": "Firebase",
+        "path": "/assets/logos/azure.svg"
+      },
+      {
+        "id": 3,
+        "name": "Google Analytics",
+        "path": "/assets/logos/stripe.svg"
+      },
+      {
+        "id": 4,
+        "name": "UX Research",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Portfolio",
+    "description": "Modern, interactive portfolio website featuring 3D carousel, glassmorphism design, and cutting-edge web technologies.",
+    "subDescription": [
+      "Built with React 19, Vite, and Tailwind CSS for modern development experience",
+      "Implemented 3D cylindrical carousel with auto-rotation and hover interactions",
+      "Created glassmorphism UI with backdrop blur effects and smooth animations",
+      "Integrated Three.js for 3D graphics and GSAP for professional animations",
+      "Designed responsive timeline with chrome-effect slider and shooting star moon",
+      "Deployed with Vite build system for optimal performance"
+    ],
+    "href": "https://sukeshram.dev",
+    "logo": "",
+    "image": "/assets/portfolio.jpeg",
+    "tags": [
+      {
+        "id": 1,
+        "name": "React",
+        "path": "/assets/logos/react.svg"
+      },
+      {
+        "id": 2,
+        "name": "Three.js",
+        "path": "/assets/logos/threejs.svg"
+      },
+      {
+        "id": 3,
+        "name": "Tailwind CSS",
+        "path": "/assets/logos/tailwindcss.svg"
+      },
+      {
+        "id": 4,
+        "name": "Vite",
+        "path": "/assets/logos/vitejs.svg"
+      }
+    ]
+  }
+]
+

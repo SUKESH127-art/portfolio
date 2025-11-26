@@ -72,7 +72,7 @@ portfolio_site/
 │   │   ├── Carousel.jsx    # 3D project carousel
 │   │   └── ...
 │   ├── sections/           # Main page sections
-│   │   ├── Hero.jsx        # Landing section
+│   │   ├── Home.jsx        # Landing section
 │   │   ├── About.jsx       # About me section
 │   │   ├── Experiences.jsx # Work experience timeline
 │   │   └── Projects.jsx    # 3D project showcase
@@ -120,7 +120,7 @@ npm run preview
 
 ## 🎯 Key Sections
 
-### 🏠 **Hero Section**
+### 🏠 **Home Section**
 - Dynamic text animations with GSAP
 - Parallax background effects
 - Responsive design with mobile optimization

@@ -1,0 +1,24 @@
+{
+  "title": "Sukesh",
+  "favicon": "/assets/moon_icon Background Removed.png",
+  "fonts": {
+    "primary": {
+      "name": "Bodoni Moda",
+      "type": "serif",
+      "source": "google",
+      "url": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap",
+      "weights": [400, 500, 600, 700, 800, 900],
+      "styles": ["normal", "italic"],
+      "description": "Primary serif font for the entire site"
+    }
+  },
+  "meta": {
+    "description": "Portfolio website of Sukesh Ram - Software Engineer, Technologist, and Builder",
+    "keywords": "Sukesh Ram, Software Engineer, Portfolio, React, Developer",
+    "author": "Sukesh Ram",
+    "og:title": "Sukesh Ram - Portfolio",
+    "og:description": "Portfolio website showcasing projects, experiences, and skills",
+    "og:type": "website"
+  }
+}
+

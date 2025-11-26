@@ -1,0 +1,92 @@
+{
+  "workExperiences": {
+    "google": {
+      "path": "/assets/work_experiences/google-logo Background Removed.png",
+      "description": "Google company logo"
+    },
+    "petsmart": {
+      "path": "/assets/work_experiences/PetSmart Background Removed.png",
+      "description": "PetSmart company logo"
+    },
+    "havenly": {
+      "path": "/assets/work_experiences/havenly Background Removed.png",
+      "description": "Havenly Treats company logo"
+    },
+    "veras": {
+      "path": "/assets/work_experiences/veras.png",
+      "description": "Veras Retail company logo"
+    },
+    "asu": {
+      "path": "/assets/work_experiences/asu_reserarch.jpg",
+      "description": "ASU research logo"
+    },
+    "microdrop": {
+      "path": "/assets/work_experiences/microdrop Background Removed.png",
+      "description": "MicroDrop company logo"
+    }
+  },
+  "tech": {
+    "android": "/assets/logos/android.svg",
+    "angular": "/assets/logos/angular.svg",
+    "auth0": "/assets/logos/auth0.svg",
+    "azure": "/assets/logos/azure.svg",
+    "biology": "/assets/logos/biology.svg",
+    "blazor": "/assets/logos/blazor.svg",
+    "cplusplus": "/assets/logos/cplusplus.svg",
+    "csharp": "/assets/logos/csharp.svg",
+    "css3": "/assets/logos/css3.svg",
+    "dotnet": "/assets/logos/dotnet.svg",
+    "dotnetcore": "/assets/logos/dotnetcore.svg",
+    "git": "/assets/logos/git.svg",
+    "github": "/assets/logos/github.svg",
+    "html5": "/assets/logos/html5.svg",
+    "ionic": "/assets/logos/ionic.svg",
+    "java": "/assets/logos/java.svg",
+    "javascript": "/assets/logos/javascript.svg",
+    "kotlin": "/assets/logos/kotlin.svg",
+    "react": "/assets/logos/react.svg",
+    "research": "/assets/logos/research.svg",
+    "salesforce": "/assets/logos/salesforce.svg",
+    "semiconductor": "/assets/logos/semiconductor.svg",
+    "sqlite": "/assets/logos/sqlite.svg",
+    "stripe": "/assets/logos/stripe.svg",
+    "swift": "/assets/logos/swift.svg",
+    "tailwindcss": "/assets/logos/tailwindcss.svg",
+    "threejs": "/assets/logos/threejs.svg",
+    "typescript": "/assets/logos/typescript.svg",
+    "vitejs": "/assets/logos/vitejs.svg",
+    "wordpress": "/assets/logos/wordpress.svg",
+    "youtube": "/assets/logos/youtube.svg"
+  },
+  "projects": {
+    "mcp_sql": {
+      "path": "/assets/logos/mcp_sql.webp",
+      "description": "DBAgent project image"
+    },
+    "llm_scribe": {
+      "path": "/assets/logos/llm_scribe.png",
+      "description": "LLM-Scribe project image"
+    },
+    "llm_search_insight": {
+      "path": "/assets/logos/llm_search_insight.png",
+      "description": "InsightGPT project image"
+    },
+    "pycrawl": {
+      "path": "/assets/pycrawl.png",
+      "description": "PyCrawl project image"
+    },
+    "tellusdoc": {
+      "path": "/assets/logos/tellusdoc.png",
+      "description": "TellusDoc project image"
+    },
+    "havenly": {
+      "path": "/assets/logos/havenly.png",
+      "description": "Havenly project image"
+    },
+    "portfolio": {
+      "path": "/assets/portfolio.jpeg",
+      "description": "Portfolio project image"
+    }
+  }
+}
+

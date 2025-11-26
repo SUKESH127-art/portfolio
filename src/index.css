@@ -1,6 +1,8 @@
+/* Font import - font configuration in src/data/entire_site/siteMetadata.json */
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 @import "tailwindcss";
 @theme {
+  /* Theme colors - defined in src/data/colors.json */
   --color-primary: #f8fafc;
   --color-midnight: #f1f5f9;
   --color-navy: #e2e8f0;
@@ -14,6 +16,23 @@
   --color-orange: #ea580c;
   --color-sand: #d97706;
   --color-coral: #e11d48;
+  
+  /* Brand colors - from colors.json */
+  --color-brand-primary: #0e7490;
+  --color-brand-primary-hover: #155e75;
+  --color-brand-secondary: #5c33cc;
+  --color-brand-accent: #7a57db;
+  
+  /* Background colors - from colors.json */
+  --color-bg-page: #e0f2fe;
+  --color-bg-white: #ffffff;
+  --color-bg-dark: #000000;
+  
+  /* Text colors - from colors.json */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-light: #ffffff;
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
     0% {
@@ -94,18 +113,18 @@
   }
 }
 
-/* Glass UI Effects */
+/* Glass UI Effects - colors from colors.json */
 .glass-card {
   backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(255, 255, 255, 0.1); /* glass.background.light */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* glass.border.light */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* shadows.glass.base */
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  background: rgba(255, 255, 255, 0.15); /* glass.background.medium */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* glass.border.medium */
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5); /* shadows.glassHover.base */
 }
 
 /* Line clamp utility */
@@ -116,9 +135,9 @@
   overflow: hidden;
 }
 body {
-  background: #e0f2fe;
+  background: var(--color-bg-page);
   font-family: "Bodoni Moda", serif;
-  color: #0f172a;
+  color: var(--color-text-primary);
   scroll-behavior: smooth;
   overflow-x: hidden;
   margin: 0;
@@ -158,8 +177,8 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  background: linear-gradient(to bottom, rgba(224, 242, 254, 0.9), transparent);
+  height: 100px;
+  background: linear-gradient(to bottom, var(--color-bg-overlay, rgba(224, 242, 254, 0.3)), transparent);
   pointer-events: none;
   z-index: 0;
 }

@@ -1,5 +1,5 @@
-import PillNav from "./components/PillNav";
-import Hero from "./sections/Hero";
+import PillNav from "./components/navigation/PillNav";
+import Home from "./sections/Home";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
@@ -10,7 +10,7 @@ const App = () => {
       <PillNav />
       <div className="scroll-container">
         <div className="container mx-auto max-w-7xl">
-          <Hero />
+          <Home />
           <About />
           <Experiences />
           <Projects />

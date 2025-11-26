@@ -1,0 +1,17 @@
+{
+  "desktop": {
+    "greeting": "Hey, I'm Sukesh!",
+    "intro": "I'm technologist who loves"
+  },
+  "mobile": {
+    "greeting": "I'm Sukesh",
+    "intro": "I love"
+  },
+  "flipWords": [
+    "designing!",
+    "building!",
+    "iterating!",
+    "launching!"
+  ]
+}
+

@@ -1,7 +1,10 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { myProjects, mySocials } from "../constants";
+import myProjects from "../data/projects/projects.json";
+import mySocials from "../data/entire_site/social/links.json";
+import footerData from "../data/projects/footer.json";
 import { motion, useAnimation, useMotionValue, useTransform, AnimatePresence } from "motion/react";
 import PropTypes from "prop-types";
+import SectionBackground from "../components/layout/SectionBackground";
 
 // Custom hook for isomorphic layout effect
 const useIsomorphicLayoutEffect =
@@ -84,21 +87,12 @@ const Projects = () => {
   };
 
   return (
-    <section
+    <SectionBackground
+      imageUrl="/assets/impression-sunrise.jpg"
       id="projects"
       className="relative"
-      style={{
-        backgroundImage: 'url(/assets/impression-sunrise.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100vw',
-        maxWidth: '100%',
-        marginLeft: 'calc(-50vw + 50%)',
-        marginRight: 'calc(-50vw + 50%)',
-        minHeight: '100vh',
-        paddingTop: '5rem'
-      }}
+      minHeight="100vh"
+      style={{ paddingTop: '5rem' }}
     >
       {/* 3D Carousel Container */}
       <div className="relative z-10 w-full overflow-hidden flex items-center justify-center c-space" style={{ minHeight: 'calc(100vh - 11rem)', paddingRight: '2.5rem' }}>
@@ -161,14 +155,14 @@ const Projects = () => {
       {/* Footer Text */}
       <div className="flex items-center justify-between text-white text-sm mt-16 pb-8 c-space" style={{ marginRight: '2.5rem' }}>
         <p className="flex items-center gap-1">
-          <span role="img" aria-label="love">❤️</span> React + Vite + Tailwind + 3JS
+          {footerData.techStack}
         </p>
         <div className="flex gap-3">
           {mySocials.map((social, index) => {
             // Replace WhatsApp with GitHub
             if (social.name === 'WhatsApp') {
               return (
-                <a href="https://github.com/SUKESH127-art" key={index} target="_blank" rel="noopener noreferrer">
+                <a href={footerData.githubUrl} key={index} target="_blank" rel="noopener noreferrer">
                   <img src="/assets/logos/github.svg" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} alt="GitHub" />
                 </a>
               );
@@ -180,9 +174,9 @@ const Projects = () => {
             );
           })}
         </div>
-        <p>© 2025 Sukesh Ram.</p>
+        <p>{footerData.copyright}</p>
       </div>
-    </section>
+    </SectionBackground>
   );
 };
 

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import Alert from "../components/Alert";
-import { Particles } from "../components/Particles";
+import Alert from "../components/ui/Alert";
+import { Particles } from "../components/ui/Particles";
+import contactContent from "../data/contact/content.json";
+import { getColor } from "../utils/colors";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -34,20 +37,20 @@ const Contact = () => {
         "template_17us8im",
         {
           from_name: formData.name,
-          to_name: "Sukesh",
+          to_name: contactContent.emailjs.toName,
           from_email: formData.email,
-          to_email: "sukeshram7245@gmail.com",
+          to_email: contactContent.emailjs.toEmail,
           message: formData.message,
         },
         "pn-Bw_mS1_QQdofuV"
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+      showAlertMessage("success", contactContent.alerts.success);
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage("danger", contactContent.alerts.error);
     }
   };
   return (
@@ -56,29 +59,28 @@ const Contact = () => {
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
-        color={"#cbd5e1"}
+        color={getColor('particles.color.base')}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-slate-200 rounded-2xl bg-white shadow-xl">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let&apos;s Talk</h2>
+          <h2 className="text-heading">{contactContent.heading}</h2>
           <p className="font-normal text-neutral-400">
-            Whether you&apos;re loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I&apos;m here to help
+            {contactContent.description}
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="feild-label">
-              Full Name
+              {contactContent.form.labels.name}
             </label>
             <input
               id="name"
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder="John Doe"
+              placeholder={contactContent.form.placeholders.name}
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -87,14 +89,14 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="feild-label">
-              Email
+              {contactContent.form.labels.email}
             </label>
             <input
               id="email"
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="JohnDoe@email.com"
+              placeholder={contactContent.form.placeholders.email}
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -103,7 +105,7 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="feild-label">
-              Message
+              {contactContent.form.labels.message}
             </label>
             <textarea
               id="message"
@@ -111,7 +113,7 @@ const Contact = () => {
               type="text"
               rows="4"
               className="field-input field-input-focus"
-              placeholder="Share your thoughts..."
+              placeholder={contactContent.form.placeholders.message}
               autoComplete="message"
               value={formData.message}
               onChange={handleChange}
@@ -122,7 +124,7 @@ const Contact = () => {
             type="submit"
             className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
           >
-            {!isLoading ? "Send" : "Sending..."}
+            {!isLoading ? contactContent.form.button.send : contactContent.form.button.sending}
           </button>
         </form>
       </div>
