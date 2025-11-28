@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import PillNav from "./components/navigation/PillNav";
 import ScrollBubble from "./components/navigation/ScrollBubble";
 import Home from "./sections/Home";
@@ -8,6 +9,7 @@ import Experiences from "./sections/Experiences";
 const App = () => {
   return (
     <>
+      <SpeedInsights />
       <PillNav />
       <ScrollBubble />
       <div className="scroll-container">
