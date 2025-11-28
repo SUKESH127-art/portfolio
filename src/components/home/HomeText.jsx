@@ -46,16 +46,7 @@ const HomeText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex- flex-col space-y-6 md:hidden">
-        <motion.p
-          className="text-4xl font-medium"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-        >
-          {homeContent.mobile.greeting}
-        </motion.p>
+      <div className="flex- flex-col space-y-6 md:hidden pt-12">
         <div>
           <motion.p
             className="text-5xl font-black text-sky-700"

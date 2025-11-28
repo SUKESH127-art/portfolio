@@ -118,8 +118,6 @@ The `FlipWords` component creates an animated word cycling effect:
      - About section (`#about`)
      - Experiences section (`#experience`)
      - Projects section (`#projects`)
-   
-   **Note**: `Contact.jsx` section exists but is not currently rendered in `App.jsx`
 
 2. **Home Section** (`#home`) contains:
    - `HomeText` (left side, z-index 10) - Main text content with animations

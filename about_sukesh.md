@@ -13,6 +13,11 @@ Aspiring founder and Google Software Engineer with entrepreneurial drive and pro
 
 **Current Focus:** Building MCP-related tools (DBAgent) and exploring startup opportunities with strong team dynamics.
 
+## Fun Summary
+I was born in the bay area, but grew up (and claim) Phoenix, Arizona. I went to BASIS Peoria High School. 
+I've been living in San Francisco for the past two years since graduating from Yale. At Yale, I studied Computer Science
+Hobbies: watching horror movies, reading political theory, hiking/running/outdoors activities, adrenaline-junkie activities (ie: snowboarding, ziplining).
+
 ---
 
 ## Education

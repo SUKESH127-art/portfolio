@@ -1,0 +1,62 @@
+{
+  "heading": "A Dome of Inspirations",
+  "subheading": "Textures, palettes, and moods feeding my current work",
+  "body": [
+    "Between releases I collect visuals that echo the same depth and layering I aim for in UX—soft gradients, tactile lighting, and organic geometry.",
+    "This rotating dome is a living moodboard pulled from public domain plus personal captures. Tap any tile to inspect it, then escape or click outside to close."
+  ],
+  "cta": {
+    "label": "See latest sketches",
+    "href": "#projects"
+  },
+  "images": [
+    {
+      "src": "/assets/dome-gallery/main_about_me.jpg",
+      "alt": "Sukesh Ram",
+      "title": "Intro",
+      "description": "I'm Google SWE a Yale alum ('23), passionate about building 0->1!"
+    },
+    {
+      "src": "/assets/dome-gallery/grewupinarizona.jpg",
+      "alt": "Arizona roots",
+      "title": "Roots",
+      "description": "I was born in the Bay, but grew up in Phx, AZ. Growing up in the desert fostered my passion for the outdoors (and the supernatural ability to weather scorching summers)!"
+    },
+    {
+      "src": "/assets/dome-gallery/graduated_yale_2023twoyearsagowithBSincomputerscience.jpg",
+      "alt": "Yale graduation",
+      "title": "Yale",
+      "description": "I graduated with a Computer Science degree in 2023, but was involved in several many diverse campus activites spanning: CS50 & Algos (TA), Politic (Staff Writer), Admissions (Recruiter), South Asian Society & Code Haven (Mentor), Model UN (Organizer)."
+    },
+    {
+      "src": "/assets/dome-gallery/livinginsan_franciscoforpasttwoyears.jpeg",
+      "alt": "San Francisco",
+      "title": "Bay Area",
+      "description": "I've lived in San Francisco since graduation. In my free time, I love exploring local parks, museums, & cafes! If you're in the area, feel free to reach out for a coffee chat or city tour!"
+    },
+    {
+      "src": "/assets/dome-gallery/love_traveling_this_pic_is_culebra.jpeg",
+      "alt": "Traveling to Culebra",
+      "title": "Wanderlust",
+      "description": "I've been to 12 countries, always looking to add more stamps to my passport!"
+    },
+    {
+      "src": "/assets/dome-gallery/lovenatureandhiking.jpeg",
+      "alt": "Nature and hiking",
+      "title": "Nature Enthusiast",
+      "description": "I love doing anything outdoorsy (hiking, climbing, running)."
+    },
+    {
+      "src": "/assets/dome-gallery/roxie.jpg",
+      "alt": "Roxie Theater",
+      "title": "Film",
+      "description": "I love nerding out and dissecting indie films (or guilty pleasure slashers). All-time favs: 2001: A Space Odyssey, Eyes Wide Shut, The Shining"
+    },
+    {
+      "src": "/assets/dome-gallery/foodie.jpeg",
+      "alt": "Foodie",
+      "title": "Foodie",
+      "description": "I'm a self-proclaimed foodie who enjoys discovering (and occasionally cooking) new dishes."
+    }
+  ]
+}

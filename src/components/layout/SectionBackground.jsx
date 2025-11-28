@@ -6,9 +6,14 @@ const SectionBackground = ({
   className = '', 
   id,
   backgroundPosition = 'center',
+  backgroundSize = 'cover',
   minHeight = '100vh',
+  maxHeight,
   ...rest 
 }) => {
+  // Extract style from rest to merge properly
+  const { style: restStyle, ...restProps } = rest;
+  
   return (
     <section 
       id={id}
@@ -16,9 +21,10 @@ const SectionBackground = ({
       style={{ 
         position: 'relative',
         minHeight,
-        ...rest.style 
+        ...(maxHeight && { maxHeight }),
+        ...restStyle 
       }}
-      {...rest}
+      {...restProps}
     >
       {/* Background Layer - breaks out of container to full viewport width */}
       <div 
@@ -26,7 +32,7 @@ const SectionBackground = ({
         style={{
           backgroundImage: `url(${imageUrl})`,
           backgroundPosition: backgroundPosition,
-          backgroundSize: 'cover',
+          backgroundSize: backgroundSize,
           backgroundRepeat: 'no-repeat',
           top: 0,
           left: '50%',
@@ -51,7 +57,9 @@ SectionBackground.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   backgroundPosition: PropTypes.string,
+  backgroundSize: PropTypes.string,
   minHeight: PropTypes.string,
+  maxHeight: PropTypes.string,
 };
 
 export default SectionBackground;

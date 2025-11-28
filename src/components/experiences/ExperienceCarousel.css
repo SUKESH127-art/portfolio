@@ -1,0 +1,19 @@
+.experience-carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 10rem auto 3rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .experience-carousel-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+  }
+}
+

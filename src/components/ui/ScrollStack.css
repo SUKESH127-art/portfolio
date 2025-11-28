@@ -1,0 +1,27 @@
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scroll-stack-card {
+  border-radius: 36px;
+  padding: 1.75rem 2.25rem;
+  box-shadow: 0 20px 80px rgba(15, 23, 42, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: #0f172a;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  flex-direction: column;
+  width: clamp(320px, 58vw, 480px);
+  margin: 0 auto;
+}
+

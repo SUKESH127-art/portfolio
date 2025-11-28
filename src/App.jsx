@@ -1,4 +1,5 @@
 import PillNav from "./components/navigation/PillNav";
+import ScrollBubble from "./components/navigation/ScrollBubble";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <>
       <PillNav />
+      <ScrollBubble />
       <div className="scroll-container">
         <div className="container mx-auto max-w-7xl">
           <Home />

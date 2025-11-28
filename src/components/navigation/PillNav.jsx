@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
-import StarBorder from './StarBorder';
+import { useState, useEffect, useRef } from 'react';
+import GlassSurface from '../ui/GlassSurface';
 import './PillNav.css';
 import navigationData from '../../data/entire_site/navigation/items.json';
 
 const PillNav = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const isNavigatingRef = useRef(false);
+  const navigationTimeoutRef = useRef(null);
+  const activeSectionRef = useRef('home');
 
   const navItems = navigationData.navItems;
 
@@ -13,88 +16,129 @@ const PillNav = () => {
     return navigationData.mobileTitles[sectionId] || "Home";
   };
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (sectionId, event) => {
+    event.preventDefault();
+
+    const targetSection = document.getElementById(sectionId);
+    if (!targetSection) return;
+
+    if (navigationTimeoutRef.current) {
+      clearTimeout(navigationTimeoutRef.current);
+    }
+
+    isNavigatingRef.current = true;
     setActiveSection(sectionId);
+
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    navigationTimeoutRef.current = window.setTimeout(() => {
+      isNavigatingRef.current = false;
+    }, 900);
   };
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isNavigatingRef.current) return;
+
       const sections = navigationData.sections;
       const scrollPosition = window.scrollY + 100; // Reduced from 200 to 100
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
+      const currentActive = activeSectionRef.current;
 
       // Check if we're near the bottom of the page (within 100px)
       const isNearBottom = window.scrollY + windowHeight >= documentHeight - 100;
 
       if (isNearBottom) {
-        // If near bottom, always show the last section as active
-        setActiveSection('projects');
+        if (currentActive !== 'projects') {
+          setActiveSection('projects');
+        }
         return;
       }
 
-      // Find the current section with more precise detection
-      let currentSection = 'home'; // Default to home
-      
+      let currentSection = currentActive;
+
       for (let i = 0; i < sections.length; i++) {
         const section = document.getElementById(sections[i]);
         if (section) {
           const sectionTop = section.offsetTop;
           const sectionBottom = sectionTop + section.offsetHeight;
-          
-          // Check if scroll position is within this section
+
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             currentSection = sections[i];
             break;
           }
         }
       }
-      
-      setActiveSection(currentSection);
+
+      if (currentSection !== currentActive) {
+        setActiveSection(currentSection);
+      }
     };
 
     handleScroll();
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (navigationTimeoutRef.current) {
+        clearTimeout(navigationTimeoutRef.current);
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    activeSectionRef.current = activeSection;
+  }, [activeSection]);
+
+  const isExperienceSection = activeSection === 'experience';
+  const isProjectsSection = activeSection === 'projects';
 
   return (
     <nav className="pill-nav-container">
-      {/* StarBorder color: text.light.base from colors.json */}
-      <StarBorder 
-        color="white"
-        speed="8s"
-        className="pill-nav"
+      <GlassSurface
+        width="auto"
+        height="auto"
+        borderRadius={9999}
+        className="pill-nav-glass"
+        backgroundOpacity={isExperienceSection ? 0.4 : 0}
+        style={{ padding: '0.75rem 2rem' }}
       >
         {/* Desktop View */}
         <div className="pill-nav-desktop">
-          {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="pill-nav-link"
-              onClick={() => handleNavClick(item.id)}
-              {...(activeSection === item.id && {
-                style: {
-                  textDecoration: 'underline',
-                  textDecorationColor: '#0e7490', // brand.primary.base - from colors.json
-                  textDecorationThickness: '2px',
-                  textUnderlineOffset: '8px'
-                }
-              })}
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = activeSection === item.id;
+            const linkStyle = isActive ? {
+              textDecoration: 'underline',
+              textDecorationColor: isProjectsSection ? '#ffffff' : '#0e7490',
+              textDecorationThickness: '2px',
+              textUnderlineOffset: '8px',
+              color: isProjectsSection ? '#ffffff' : undefined
+            } : {
+              ...(isProjectsSection && { color: '#ffffff' })
+            };
+            
+            return (
+              <a
+                key={index}
+                href={item.href}
+                className={`pill-nav-link ${isProjectsSection ? 'pill-nav-link--projects' : ''}`}
+                onClick={(e) => handleNavClick(item.id, e)}
+                style={linkStyle}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </div>
 
         {/* Mobile Section Title */}
         <div className="pill-nav-mobile-title">
-          <h2 className="text-lg font-semibold text-neutral-700">
+          <h2 className="text-lg font-semibold text-neutral-700 dark:text-neutral-200">
             {getSectionTitle(activeSection)}
           </h2>
         </div>
-      </StarBorder>
+      </GlassSurface>
     </nav>
   );
 };

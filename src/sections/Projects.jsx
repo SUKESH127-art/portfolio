@@ -5,6 +5,7 @@ import footerData from "../data/projects/footer.json";
 import { motion, useAnimation, useMotionValue, useTransform, AnimatePresence } from "motion/react";
 import PropTypes from "prop-types";
 import SectionBackground from "../components/layout/SectionBackground";
+import GlassSurface from "../components/ui/GlassSurface";
 
 // Custom hook for isomorphic layout effect
 const useIsomorphicLayoutEffect =
@@ -49,7 +50,6 @@ const useMediaQuery = (query, { defaultValue = false, initializeWithValue = true
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isCarouselActive, setIsCarouselActive] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
   const isScreenSizeSm = useMediaQuery("(max-width: 640px)");
   
@@ -66,14 +66,14 @@ const Projects = () => {
 
   // Auto-rotation effect
   useEffect(() => {
-    if (!isCarouselActive || isHovered || selectedProject) return;
+    if (!isCarouselActive || selectedProject) return;
 
     const interval = setInterval(() => {
       rotation.set(rotation.get() + 0.5); // Slow rotation: 0.5 degrees per interval
     }, 50); // Update every 50ms for smooth animation
 
     return () => clearInterval(interval);
-  }, [isCarouselActive, isHovered, selectedProject, rotation]);
+  }, [isCarouselActive, selectedProject, rotation]);
 
   const handleClick = (project) => {
     setSelectedProject(project);
@@ -88,23 +88,17 @@ const Projects = () => {
 
   return (
     <SectionBackground
-      imageUrl="/assets/impression-sunrise.jpg"
+      imageUrl="/assets/sunset.jpg"
       id="projects"
       className="relative"
       minHeight="100vh"
       style={{ paddingTop: '5rem' }}
     >
       {/* 3D Carousel Container */}
-      <div className="relative z-10 w-full overflow-hidden flex items-center justify-center c-space" style={{ minHeight: 'calc(100vh - 11rem)', paddingRight: '2.5rem' }}>
-        {/* Glass Indicator Card */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div 
-            className="w-[520px] h-[455px] rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl opacity-60"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          ></div>
-        </div>
-        
+      <div 
+        className="relative z-10 w-full overflow-hidden flex items-center justify-center c-space" 
+        style={{ minHeight: 'calc(65vh)', paddingRight: '0.5rem' }}
+      >
         <div
           className="flex items-center justify-center h-[300px] relative z-10"
           style={{
@@ -140,6 +134,45 @@ const Projects = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Pause/Resume Button */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
+          <button
+            type="button"
+            onClick={() => setIsCarouselActive(!isCarouselActive)}
+            className="flex items-center justify-center cursor-pointer transition-transform hover:scale-110 active:scale-95"
+            aria-label={isCarouselActive ? "Pause rotation" : "Resume rotation"}
+          >
+            <GlassSurface 
+              width={64} 
+              height={64} 
+              borderRadius={9999} 
+              className="p-0 flex items-center justify-center"
+              backgroundOpacity={0}
+            >
+              {isCarouselActive ? (
+                // Pause icon (two vertical bars)
+                <svg 
+                  className="w-6 h-6 text-white" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+              ) : (
+                // Play icon (triangle)
+                <svg 
+                  className="w-6 h-6 text-white ml-0.5" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
+            </GlassSurface>
+          </button>
+        </div>
       </div>
 
       {/* Modal for Project Details */}
@@ -153,10 +186,7 @@ const Projects = () => {
       </AnimatePresence>
 
       {/* Footer Text */}
-      <div className="flex items-center justify-between text-white text-sm mt-16 pb-8 c-space" style={{ marginRight: '2.5rem' }}>
-        <p className="flex items-center gap-1">
-          {footerData.techStack}
-        </p>
+      <div className="flex items-center justify-between text-white text-sm pt-30 pb-8 c-space" style={{ marginRight: '2.5rem' }}>
         <div className="flex gap-3">
           {mySocials.map((social, index) => {
             // Replace WhatsApp with GitHub
@@ -201,7 +231,7 @@ const ProjectCard3D = ({ project }) => {
 
         {/* Content Overlay */}
         <div className="absolute inset-0 p-6 flex flex-col justify-end">
-          <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors">
+          <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#22d3ee] transition-colors">
             {project.title}
           </h3>
           
@@ -219,7 +249,7 @@ const ProjectCard3D = ({ project }) => {
         </div>
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0e7490]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
     </motion.div>
   );

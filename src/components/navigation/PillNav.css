@@ -6,12 +6,8 @@
   z-index: 99;
 }
 
-.pill-nav {
+.pill-nav-glass {
   position: relative;
-  background: transparent;
-  border: none;
-  padding: 0;
-  box-shadow: none;
 }
 
 .pill-nav-desktop {
@@ -32,6 +28,25 @@
 
 .pill-nav-link:hover {
   color: #155e75; /* brand.primary.hover - from colors.json */
+}
+
+.pill-nav-link--projects {
+  color: #ffffff !important; /* White text for projects section */
+}
+
+.pill-nav-link--projects:hover {
+  color: #e5e7eb !important; /* Light gray on hover for projects section */
+}
+
+/* Ensure projects section styling only applies on desktop */
+@media (min-width: 769px) {
+  .pill-nav-link--projects {
+    color: #ffffff !important;
+  }
+  
+  .pill-nav-link--projects:hover {
+    color: #e5e7eb !important;
+  }
 }
 
 .pill-nav-hamburger {
@@ -78,6 +93,18 @@
   display: none;
 }
 
+.scroll-bubble {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.scroll-bubble:hover {
+  transform: translateY(2px) scale(1.02);
+}
+
 .hamburger-line {
   width: 24px;
   height: 2px;
@@ -106,7 +133,7 @@
     top: 2em;
   }
 
-  .pill-nav {
+  .pill-nav-glass {
     padding: 0.5rem 1rem;
   }
 
