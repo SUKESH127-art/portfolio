@@ -7,48 +7,22 @@ export default defineConfig({
   build: {
     // Enable tree shaking
     minify: "esbuild",
-    // Manual chunk splitting for better code splitting
+    // Let Vite handle chunk splitting automatically - it's smarter about dependencies
+    // This prevents "createContext" errors from improper load order
     rollupOptions: {
       output: {
+        // Only split out the largest library (motion) for better caching
         manualChunks(id) {
-          // React and React DOM - must be first and together
-          if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) {
-            return "react-vendor";
-          }
-          // All React-dependent libraries - bundle with React to ensure proper load order
-          // This prevents "Cannot read properties of undefined" errors
-          if (
-            id.includes("node_modules/react-icons/") ||
-            id.includes("node_modules/react-responsive/") ||
-            id.includes("node_modules/prop-types/") ||
-            id.includes("node_modules/@vercel/") ||
-            id.includes("node_modules/@use-gesture/") ||
-            id.includes("node_modules/@gsap/react/") ||
-            id.includes("node_modules/@react-three/")
-          ) {
-            return "react-vendor";
-          }
-          // Motion library (Framer Motion) - depends on React but large enough to separate
-          // Motion has its own React dependency handling
+          // Motion library is large and can be cached separately
           if (id.includes("node_modules/motion/")) {
             return "motion-vendor";
           }
-          // Three.js core (only if actually used, separate from React Three)
-          if (id.includes("node_modules/three/")) {
-            return "three-vendor";
-          }
-          // GSAP core (only if actually used, separate from React GSAP)
-          if (id.includes("node_modules/gsap/") && !id.includes("@gsap/react")) {
-            return "gsap-vendor";
-          }
-          // Other node_modules go into vendor chunk
-          if (id.includes("node_modules/")) {
-            return "vendor";
-          }
+          // Let Vite automatically handle all other chunking
+          // It will properly handle React dependencies
         },
       },
     },
-    // Increase chunk size warning limit (since we're splitting properly)
+    // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
   },
   // Optimize dependencies
