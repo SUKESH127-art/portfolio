@@ -11,31 +11,35 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          // React and React DOM
+          // React and React DOM - must be first and together
           if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) {
             return "react-vendor";
           }
-          // Motion library (Framer Motion)
+          // All React-dependent libraries - bundle with React to ensure proper load order
+          // This prevents "Cannot read properties of undefined" errors
+          if (
+            id.includes("node_modules/react-icons/") ||
+            id.includes("node_modules/react-responsive/") ||
+            id.includes("node_modules/prop-types/") ||
+            id.includes("node_modules/@vercel/") ||
+            id.includes("node_modules/@use-gesture/") ||
+            id.includes("node_modules/@gsap/react/") ||
+            id.includes("node_modules/@react-three/")
+          ) {
+            return "react-vendor";
+          }
+          // Motion library (Framer Motion) - depends on React but large enough to separate
+          // Motion has its own React dependency handling
           if (id.includes("node_modules/motion/")) {
             return "motion-vendor";
           }
-          // Three.js libraries (only if actually used)
-          if (
-            id.includes("node_modules/three/") ||
-            id.includes("node_modules/@react-three/")
-          ) {
+          // Three.js core (only if actually used, separate from React Three)
+          if (id.includes("node_modules/three/")) {
             return "three-vendor";
           }
-          // GSAP (only if actually used)
-          if (id.includes("node_modules/gsap/") || id.includes("node_modules/@gsap/")) {
+          // GSAP core (only if actually used, separate from React GSAP)
+          if (id.includes("node_modules/gsap/") && !id.includes("@gsap/react")) {
             return "gsap-vendor";
-          }
-          // UI libraries
-          if (
-            id.includes("node_modules/react-icons/") ||
-            id.includes("node_modules/react-responsive/")
-          ) {
-            return "ui-vendor";
           }
           // Other node_modules go into vendor chunk
           if (id.includes("node_modules/")) {
