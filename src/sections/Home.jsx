@@ -1,16 +1,11 @@
-import { Suspense, lazy } from "react";
 import HomeText from "../components/home/HomeText";
-
-// Lazy load ParallaxBackground component (uses motion library)
-const ParallaxBackground = lazy(() => import("../components/home/parallaxBackground"));
+import ParallaxBackground from "../components/home/parallaxBackground";
 
 const Home = () => {
   return (
     <section id="home" className="flex items-start justify-center min-h-screen md:items-start md:justify-start c-space">
       <HomeText />
-      <Suspense fallback={null}>
-        <ParallaxBackground />
-      </Suspense>
+      <ParallaxBackground />
       <div className="absolute bottom-20 md:bottom-32 right-32 md:right-40 pointer-events-none overflow-visible">
         <img 
           src="/assets/seagulls.png" 
