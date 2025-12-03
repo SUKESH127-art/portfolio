@@ -6,6 +6,7 @@ import { motion, useAnimation, useMotionValue, useTransform, AnimatePresence } f
 import PropTypes from "prop-types";
 import SectionBackground from "../components/layout/SectionBackground";
 import GlassSurface from "../components/ui/GlassSurface";
+import "./Projects.css";
 
 // Custom hook for isomorphic layout effect
 const useIsomorphicLayoutEffect =
@@ -230,13 +231,13 @@ const ProjectCard3D = ({ project }) => {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 p-6 flex flex-col justify-end">
-          <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#22d3ee] transition-colors">
+        <div className="project-card-content absolute inset-0 p-6 flex flex-col justify-end">
+          <h3 className="project-title text-xl font-bold text-white mb-4 group-hover:text-[#22d3ee] transition-colors">
             {project.title}
           </h3>
           
           {/* Tech Tags */}
-          <div className="flex flex-wrap gap-1">
+          <div className="project-tech-tags flex flex-wrap gap-1">
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag.id}

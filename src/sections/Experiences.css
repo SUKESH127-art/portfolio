@@ -5,5 +5,10 @@
     min-height: auto !important;
     height: auto !important;
   }
+  
+  /* Reduce top padding on mobile */
+  #experience .c-space {
+    padding-top: 2rem !important; /* Reduced from pt-10 (2.5rem) */
+  }
 }
 

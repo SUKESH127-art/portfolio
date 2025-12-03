@@ -1,0 +1,25 @@
+/* Mobile styles for Projects section */
+@media (max-width: 768px) {
+  /* Hide tech stack pills on mobile */
+  .project-tech-tags {
+    display: none !important;
+  }
+  
+  /* Rotate project title 90 degrees on mobile */
+  .project-title {
+    transform: rotate(90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    position: absolute;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  
+  /* Adjust the content overlay to allow proper positioning */
+  .project-card-content {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
